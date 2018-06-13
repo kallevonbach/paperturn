@@ -1,0 +1,14 @@
+<section class="container">
+  <div class="text">
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+      Consectetur adipiscing elit. Phasellus pellentesque mauris ac convallis iaculis. In scelerisque cursus orci sed vehicula. Ut porttitor tortor at est gravida dapibus. Pellentesque efficitur eros et aliquam pretium. Donec velit odio, aliquet eu rutrum non, maximus vitae tellus. Aenean interdum magna ut lectus semper efficitur vel ut risus. Mauris blandit urna nisi, vel semper est dapibus vel. Phasellus eu dapibus ipsum.
+    </p>
+  </div>
+  <form>
+        <input type="text" (change)="getName($event)" placeholder="Name" ngModel name="username" #username="ngModel" [hidden]="submitted" required />
+        <input type="email" (change)="getMail($event)" placeholder="Email" ngModel name="usermail" #usermail="ngModel" [hidden]="submitted" required />
+        <button [disabled]="!username.dirty || !usermail.dirty" (click)="signupUser($event)" [hidden]="submitted" type="submit">Send</button>
+        <div [hidden]="!submitted">{{response}}</div>
+  </form>
+</section>

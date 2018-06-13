@@ -1,0 +1,38 @@
+.text{
+    text-align: center;
+    max-width: 730px;
+    margin: 30px auto 60px auto;
+}
+.text h1{
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.text p {
+    font-size: 0.75rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+form {
+    max-width: 545px;
+    margin: 0 auto; 
+    text-align: center;
+}
+form input{
+    width: 100%;
+    margin-bottom: 20px; 
+    font-size: 1.125rem;
+    padding: 15px;
+    border: 1px solid #1197c3;
+}
+form button{
+    width: 160px;
+    padding: 15px 0;
+    font-size: 1.125rem;
+    background-color: #1197c3;
+    border: 0;
+    color: #000000;
+}
