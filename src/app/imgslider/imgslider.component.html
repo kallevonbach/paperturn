@@ -1,24 +1,11 @@
-<section class="gallery">
-<div
-ng2-carouselamos
-[width]="1100"
-[items]="images"
-[$item]="itemTemplate"
-[$prev]="prevTemplate"
-[$next]="nextTemplate"
-></div>
-
-    <ng-template #nextTemplate>
-        <img class="arrow arrow-right" src="/assets/resource/arrow.png" />
-      </ng-template>
-      <ng-template #prevTemplate>
-          <img class="arrow arrow-left" src="/assets/resource/arrow.png"  />
-        </ng-template>
-
-  
-    <ng-template let-item let-i="index" #itemTemplate>    
-        <div class="img-con"><div class="img" [style.backgroundImage]="'url('+ item.url +')'"></div></div>
-    </ng-template>
+<section class="gallery-container">
+    <div class="gallery-inner">
+        <div class="gallery-control" [style.transform] = "'translateX('+this.position+'%)'">
+            <app-images></app-images>        
+        </div>
+        <div class="gallery-nav">
+            <img class="arrow arrow-left" src="/assets/resource/arrow.png" (click)="prevImg()" [hidden]="this.position === 0" />
+            <img class="arrow arrow-right" src="/assets/resource/arrowr.png" (click)="nextImg()" [hidden]="this.screenWidth < 700 ? this.position < -700 : (this.screenWidth < 900 ? this.position < -300 : this.position < -180)"/>
+        </div>
+    </div>
 </section>
-
-

@@ -6,22 +6,22 @@ import { AppComponent } from './app.component';
 import { ImgsliderComponent } from './imgslider/imgslider.component';
 import { FormComponent } from './form/form.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ImgsliderService } from './imgslider/imgslider.service';
-import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { ImagesService } from './imgslider/images/images.service';
+import { ImagesComponent } from './imgslider/images/images.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ImgsliderComponent,
-    FormComponent
+    FormComponent,
+    ImagesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule,
-    Ng2CarouselamosModule
+    FormsModule
   ],
-  providers: [ImgsliderService],
+  providers: [ImagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

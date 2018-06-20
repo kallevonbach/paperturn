@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { IImages } from './images';
+import { IImages } from '../images';
 import { Observable } from 'rxjs';
 
 
@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 
-export class ImgsliderService{
+export class ImagesService{
   
   constructor(private http: HttpClient) { }
 
       getImages() : Observable<IImages[]> {
-        return this.http.get<IImages[]>('http://localhost/paperturn/src/php/images.php');
+        return this.http.get<IImages[]>('http://paperturn.casperbach.dk/php/images.php');
       }
 }

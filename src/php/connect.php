@@ -1,8 +1,8 @@
 <?php 
-    $host = "localhost:3306";
-    $db = "paperturn";
-    $user = "root";
-    $password = "root";
+    $host = "mysql24.unoeuro.com";
+    $db = "casperbach_dk_db4";
+    $user = "casperbach_dk";
+    $password = "3L97Xis9gs";
     try {
         $dbh = new PDO("mysql:host=$host;dbname=$db", $user, $password);
     } catch (PDOException $ex) {

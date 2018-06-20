@@ -1,0 +1,3 @@
+<div *ngFor="let image of images; let i = index" class="item">
+    <div class="img-con"><div class="img" [style.backgroundImage]="'url('+ image.url +')'"></div></div>
+</div>

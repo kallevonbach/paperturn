@@ -30,7 +30,7 @@ export class FormComponent implements OnInit {
     const formData = new FormData();
     formData.append('name', this.username);
     formData.append('email', this.usermail);
-    this.http.post('http://localhost/paperturn/src/php/form.php', formData)
+    this.http.post('http://paperturn.casperbach.dk/php/form.php', formData)
     .subscribe((data) => {
       this.response = "Name and email have been added";
       this.submitted = true;
