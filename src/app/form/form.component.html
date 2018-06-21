@@ -6,9 +6,9 @@
     </p>
   </div>
   <form>
-        <input type="text" (change)="getName($event)" placeholder="Name" ngModel name="username" #username="ngModel" [hidden]="submitted" required />
-        <input type="email" (change)="getMail($event)" placeholder="Email" ngModel name="usermail" #usermail="ngModel" [hidden]="submitted" required />
-        <button [disabled]="!username.dirty || !usermail.dirty" (click)="signupUser($event)" [hidden]="submitted" type="submit">Send</button>
-        <div [hidden]="!submitted">{{response}}</div>
+        <input type="text" (change)="getName($event)" placeholder="Name" [className]="submitted ? 'none' : 'block'" ngModel name="username" #username="ngModel" required />
+        <input type="email" (change)="getMail($event)" placeholder="Email" ngModel name="usermail" #usermail="ngModel" [className]="submitted ? 'none' : 'block'" required />
+        <button [disabled]="!username.dirty || !usermail.dirty" (click)="signupUser($event)" [className]="submitted ? 'none' : 'block'" type="submit">Send</button>
+        <div [className]="!submitted ? 'none' : ''">{{response}}</div>
   </form>
 </section>

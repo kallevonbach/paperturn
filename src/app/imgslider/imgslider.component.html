@@ -4,8 +4,8 @@
             <app-images></app-images>        
         </div>
         <div class="gallery-nav">
-            <img class="arrow arrow-left" src="/assets/resource/arrow.png" (click)="prevImg()" [hidden]="this.position === 0" />
-            <img class="arrow arrow-right" src="/assets/resource/arrowr.png" (click)="nextImg()" [hidden]="this.screenWidth < 700 ? this.position < -700 : (this.screenWidth < 900 ? this.position < -300 : this.position < -180)"/>
+            <img class="arrow arrow-left" src="/assets/resource/arrow.png" (click)="prevImg()" *ngIf="this.position < 0" />
+            <img class="arrow arrow-right" src="/assets/resource/arrowr.png" (click)="nextImg()" *ngIf="this.screenWidth < 700 ? this.position > -800 : (this.screenWidth < 900 ? this.position > -350 : this.position > -180)"/>
         </div>
     </div>
 </section>
